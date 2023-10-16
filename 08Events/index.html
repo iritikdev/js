@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JavaScript</title>
+    <style>
+      button {
+        background-color: #001861;
+        color: aliceblue;
+        padding: 8px 25px 8px 25px;
+        border-radius: 4px;
+        outline: none;
+        border: 0;
+      }
+      button:hover {
+        transform: scale("1.05");
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learning Events in JavaScript</h1>
+    <div>
+      <button id="btn">click</button>
+      <a href="http://www.google.com" target="_blank">go to google</a>
+    </div>
+  </body>
+  <script>
+    document.getElementById("btn").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log(e);
+      },
+      false
+    );
+  </script>
+</html>
+
+<!-- 
+bubble ups
+capturing mode
+
+ -->
